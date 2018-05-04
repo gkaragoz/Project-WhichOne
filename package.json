@@ -1,0 +1,26 @@
+{
+  "name": "project-whichone",
+  "version": "1.0.0",
+  "description": "Final project of network programming lecture.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gkaragoz/Project-WhichOne.git"
+  },
+  "author": "Gökhan KARAGÖZ & Oğuzhan AYDEMİR",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gkaragoz/Project-WhichOne/issues"
+  },
+  "homepage": "https://github.com/gkaragoz/Project-WhichOne#readme",
+  "devDependencies": {
+    "nodemon": "^1.17.3"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
