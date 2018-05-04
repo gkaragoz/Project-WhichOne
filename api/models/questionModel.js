@@ -1,24 +1,24 @@
 'use strict';
 
 var mongoose = require('mongoose');
-var contentSchema = require('./contentModel');
 var Schema = mongoose.Schema;
+var contentSchema = require('./contentModel');
 
 var questionSchema = new Schema({
     leftChoice: {
-        content: contentSchema,
-        votes: {
+        type: mongoose.Schema.ObjectId,
+        ref: contentSchema,
+        vote: {
             type: Number,
             default: 0
         },
-        required: true
     },
     rightChoice: {
-        content: contentSchema,
-        votes: {
+        type: mongoose.Schema.ObjectId,
+        ref: contentSchema,
+        rightVote: {
             type: Number,
-            default: 0,
-            required: true
+            default: 0
         }
     },
     text: {
@@ -28,3 +28,4 @@ var questionSchema = new Schema({
 });
 
 module.exports = mongoose.model('Questions', questionSchema);
+
