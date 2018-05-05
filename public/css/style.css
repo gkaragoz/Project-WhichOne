@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Shrikhand&subset=latin-ext');
 @import url('https://fonts.googleapis.com/css?family=Berkshire+Swash&subset=latin-ext');
-
 * {
     margin: 0px!important;
     padding: 0px!important;
@@ -18,11 +17,11 @@ body:before {
     right: 0;
     top: 0;
     bottom: 0;
-    -webkit-filter: blur(3px);
-    -moz-filter: blur(3px);
-    -o-filter: blur(3px);
-    -ms-filter: blur(3px);
-    filter: blur(3px);
+    -webkit-filter: blur(0px);
+    -moz-filter: blur(0px);
+    -o-filter: blur(0px);
+    -ms-filter: blur(0px);
+    filter: blur(0px);
     background: url(../images/background.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -34,20 +33,23 @@ body:before {
     text-align: center;
 }
 
+
 .vs-bar p {
+    margin: 40% auto!important;
     position: absolute;
-    top: 50%;
-    left: 12%;
+    width: 100%;
+    height: 20%;
     line-height: 45px;
     font-family: 'Shrikhand', cursive;
     font-size: 27pt;
     color: white;
-    text-shadow: -1px -1px 15px white;
+    text-shadow: -1px -1px 15px black;
 }
 
 .content {
     position: relative;
     width: 50%;
+    height: 100%;
     margin: 5px;
 }
 
@@ -55,7 +57,7 @@ body:before {
     opacity: 1;
     display: block;
     width: 100%;
-    height: auto;
+    height: 100%;
     transition: .5s ease;
     backface-visibility: hidden;
 }
@@ -71,6 +73,10 @@ body:before {
     text-align: center;
 }
 
+.content{
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 25px!important;
+}
 .content:hover .image {
     opacity: 0.3;
 }
@@ -85,8 +91,12 @@ body:before {
 }
 
 .container-fluid {
+    padding:50px 0px 50px 0px; 
     position: absolute;
-    top: 40%
+    top: 40%;
+    width: 100%;
+    height: auto;
+   /*  background-color: rgba(255, 255, 255, 0.3); */
 }
 
 .middle p {
