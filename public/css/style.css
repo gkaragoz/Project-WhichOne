@@ -17,11 +17,11 @@ body:before {
     right: 0;
     top: 0;
     bottom: 0;
-    -webkit-filter: blur(0px);
-    -moz-filter: blur(0px);
-    -o-filter: blur(0px);
-    -ms-filter: blur(0px);
-    filter: blur(0px);
+    -webkit-filter: blur(2px);
+    -moz-filter: blur(2px);
+    -o-filter: blur(2px);
+    -ms-filter: blur(2px);
+    filter: blur(2px);
     background: url(../images/background.jpg) no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -43,7 +43,7 @@ body:before {
     font-family: 'Shrikhand', cursive;
     font-size: 27pt;
     color: white;
-    text-shadow: -1px -1px 15px black;
+    background-color: black;
 }
 
 .content {
@@ -60,6 +60,7 @@ body:before {
     height: 100%;
     transition: .5s ease;
     backface-visibility: hidden;
+    box-shadow: 5px 20px 5px black;
 }
 
 .middle {
@@ -74,7 +75,7 @@ body:before {
 }
 
 .content{
-    background-color: rgba(255, 255, 255, 0.9);
+    
     padding: 25px!important;
 }
 .content:hover .image {
