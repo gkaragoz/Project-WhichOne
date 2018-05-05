@@ -1,6 +1,7 @@
 var express = require('express'),
     app = express(),
     port = process.env.PORT || 3000,
+    path = require('path'),
     mongoose = require('mongoose'),
     Models = require('./api/models/whichOneModels'), //created model loading here
     bodyParser = require('body-parser');
@@ -9,6 +10,12 @@ var express = require('express'),
 mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://localhost/whichOne');
 
+//express stuff
+app.use("/",express.static(path.join(__dirname, 'public')));
+app.use("/css",express.static(path.join(__dirname, '/css')));
+app.use("/js",express.static(path.join(__dirname, '/js')));
+
+//body-parser stuff.
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
