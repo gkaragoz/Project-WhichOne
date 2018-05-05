@@ -11,6 +11,10 @@ var contentSchema = new Schema({
     imageUrl: {
         type: String,
         required: 'Name'
+    },
+    votes: {
+        type: Number,
+        default: 0
     }
 });
 

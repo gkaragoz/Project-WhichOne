@@ -6,20 +6,12 @@ var contentSchema = require('./contentModel');
 
 var questionSchema = new Schema({
     leftChoice: {
-        type: mongoose.Schema.ObjectId,
-        ref: contentSchema,
-        vote: {
-            type: Number,
-            default: 0
-        },
+        type: mongoose.Schema.Types.ObjectId,
+        ref: contentSchema
     },
     rightChoice: {
-        type: mongoose.Schema.ObjectId,
-        ref: contentSchema,
-        rightVote: {
-            type: Number,
-            default: 0
-        }
+        type: mongoose.Schema.Types.ObjectId,
+        ref: contentSchema
     },
     text: {
         type: String,
