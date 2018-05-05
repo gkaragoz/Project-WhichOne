@@ -1,48 +1,34 @@
+@import url('https://fonts.googleapis.com/css?family=Shrikhand&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash&subset=latin-ext');
+
+* {
+    margin: 0px!important;
+    padding: 0px!important;
+}
+
 html, body {
     min-height: 100%;
 }
 
-body {
-    /*  background: url(../images/background.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; */
-}
-
-/* 
-.overlay{
+body:before {
+    content: '';
+    z-index: -1;
     position: absolute;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 10;
-    background-color: rgba(0,0,0,0.5);
-}
- */
-
-.container-fluid:before {
-    content: "";
-    position: fixed;
     left: 0;
     right: 0;
-    z-index: -1;
-    display: block;
-    background: url(../images/background.jpg) no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    height: 100%;
+    top: 0;
+    bottom: 0;
     -webkit-filter: blur(3px);
     -moz-filter: blur(3px);
     -o-filter: blur(3px);
     -ms-filter: blur(3px);
     filter: blur(3px);
+    background: url(../images/background.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
-
 
 .side-bar, .vs-bar {
     text-align: center;
@@ -51,6 +37,12 @@ body {
 .vs-bar p {
     position: absolute;
     top: 50%;
+    left: 12%;
+    line-height: 45px;
+    font-family: 'Shrikhand', cursive;
+    font-size: 27pt;
+    color: white;
+    text-shadow: -1px -1px 15px white;
 }
 
 .content {
@@ -77,22 +69,31 @@ body {
     transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     text-align: center;
-    
 }
 
 .content:hover .image {
     opacity: 0.3;
 }
 
-.content:hover{
+.content:hover {
     background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
 }
+
 .content:hover .middle {
     opacity: 1;
 }
 
-p{
+.container-fluid {
+    position: absolute;
+    top: 40%
+}
+
+.middle p {
     color: white;
-    font-weight: bolder;
     text-shadow: 2px 2px black;
+    font-family: 'Berkshire Swash', cursive;
+    line-height: 28px;
+    font-size: 15px;
+    font-style: italic;
 }
