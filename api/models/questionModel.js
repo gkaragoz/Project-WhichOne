@@ -7,11 +7,11 @@ var contentSchema = require('./contentModel');
 var questionSchema = new Schema({
     leftChoice: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: contentSchema
+        ref: 'Contents'
     },
     rightChoice: {
         type: mongoose.Schema.Types.ObjectId,
-        ref: contentSchema
+        ref: 'Contents'
     },
     text: {
         type: String,

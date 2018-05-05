@@ -5,12 +5,6 @@ var mongoose = require('mongoose'),
     Question = mongoose.model('Questions');
 
 exports.list_all_questions = function (req, res) {
-    // Question.find({}, function (err, question) {
-    //     if (err)
-    //         res.send(err);
-    //     res.json(question);
-    // });
-
     Question.find({})
         .populate('leftChoice')
         .populate('rightChoice')
@@ -32,11 +26,15 @@ exports.create_a_question = function (req, res) {
 };
 
 exports.read_a_question = function (req, res) {
-    Question.findById(req.params.questionId, function (err, question) {
-        if (err)
-            res.send(err);
-        res.json(question);
-    });
+    Question.findById(req.params.questionId)
+        .populate('leftChoice')
+        .populate('rightChoice')
+        .exec(function(err, question) {
+            if (err)
+                res.send(err);
+                
+            res.json(question);
+        })
 };
 
 exports.update_a_question = function (req, res) {
