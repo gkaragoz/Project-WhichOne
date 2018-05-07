@@ -5,56 +5,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+
+    <!-- Style Sheets -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!--  -->
+
+    <title>Sence Hangisi? </title>
 </head>
 
 <body>
-    <div>
-        <div>
-            <p id="question">Soru Buraya Gelecek</p>
+    <div class="container"> 
+        <!-- Ouestion Section Start-->
+        <div class="row">
+            <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+                <p id="question">Soru Buraya Gelecek</p>
+            </div>
         </div>
-    </div>
-    <div>
+        <!-- Ouestion Section Finish-->
 
-        <!-- Left Section -->
-        <div>
-            <img src="images/lahmacun.png" alt="" width="200" height="200" id="left-image">
-            <div class="middle">
-                <p class="choose">A</p>
-                <p id="left-percent">%50</p>
-                <p id="left-vote">Oy Sayısı:
-                    <span id="lVote">500</span>
+        <div class="row">
+
+            <!-- Left Section -->
+            <div class="col-lg-6 col-md-6 col-xs-6 col-sm-6">
+                <img src="images/lahmacun.png" alt="" width="200" height="200" id="left-image">
+                <div class="middle">
+                    <p class="choose">A</p>
+                    <p id="left-percent">%50</p>
+                    <p id="left-vote">Oy Sayısı:
+                        <span id="lVote">500</span>
+                    </p>
+                </div>
+                <p id="left-text">
+                    Lahmacun
                 </p>
             </div>
-            <p id="left-text">
-                Lahmacun
-            </p>
-        </div>
+            <!-- Left Section End -->
 
-        <!-- Right Section -->
-        <div>
-            <img src="images/hamburger.png" alt="" width="200" height="200" id="right-image">
-            <div class="middle">
-                <p class="choose">B</p>
-                <p id="right-percent">%50</p>
-                <p id="right-vote">Oy Sayısı:
-                    <span id="rVote">500</span>
+
+            <!-- Right Section -->
+            <div>
+                <img src="images/hamburger.png" alt="" width="200" height="200" id="right-image">
+                <div class="middle">
+                    <p class="choose">B</p>
+                    <p id="right-percent">%50</p>
+                    <p id="right-vote">Oy Sayısı:
+                        <span id="rVote">500</span>
+                    </p>
+                </div>
+                <p id="right-text">
+                    Lahmacun
                 </p>
             </div>
-            <p id="right-text">
-                Lahmacun
-            </p>
-        </div>
-        <div>
-            <button id="next-button">Sonraki</button>
+            <!-- Right Section End-->
+            
+            <div>
+                <button id="next-button">Sonraki</button>
+            </div>
+
         </div>
 
     </div>
-
     <!-- Script Files Adding This Section -->
+<<<<<<< HEAD
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
     <script src="js/requests.js"></script>
     <script src="js/events.js"></script>
+=======
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="js/event.js"></script>
+>>>>>>> 269584b76d6868b80846cda8208b70d6ed34cdc3
 
 </body>
 
