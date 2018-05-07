@@ -1,5 +1,6 @@
-$( document ).ready(function() {
-
+$(document).ready(function() {
+    getAQuestion();
+    
     alert("Sayfa yüklendi");
 
     $("#left-image").click(function(){

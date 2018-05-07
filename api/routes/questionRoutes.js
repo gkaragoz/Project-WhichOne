@@ -13,4 +13,8 @@ module.exports = function (app) {
         .get(question.read_a_question)
         .put(question.update_a_question)
         .delete(question.delete_a_question);
+
+
+    app.route('/randomQuestion')
+        .get(question.read_a_random_question);
 };
