@@ -4,6 +4,28 @@ var mongoose = require('mongoose'),
     Content = mongoose.model('Contents'),
     Question = mongoose.model('Questions');
 
+exports.read_a_random_question = function (req, res) {
+    Question.count({}, function(err, count) {
+        if (err)
+            console.log("Any document couldn't found!");
+
+        var questionId = Math.floor(Math.random() * count);
+        
+        Question.findOne({})
+            .skip(questionId)
+            .populate('leftChoice')
+            .populate('rightChoice')
+            .exec(function (err, question) {
+                if (err)
+                    res.send(err);
+    
+                res.json(question);
+            })
+    })
+
+
+}
+
 exports.list_all_questions = function (req, res) {
     Question.find({})
         .populate('leftChoice')
