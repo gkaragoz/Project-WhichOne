@@ -22,8 +22,6 @@ exports.read_a_random_question = function (req, res) {
                 res.json(question);
             })
     })
-
-
 }
 
 exports.list_all_questions = function (req, res) {
