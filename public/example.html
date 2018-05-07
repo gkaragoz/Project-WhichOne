@@ -8,68 +8,76 @@
 
     <!-- Style Sheets -->
     <link rel="stylesheet" href="css/bootstrap.min.css">
-    <!--  -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Style Sheets End -->
 
     <title>Sence Hangisi? </title>
 </head>
 
 <body>
-    <div class="container"> 
+    <div class="container">
         <!-- Ouestion Section Start-->
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
+        <div class="row ">
+            <div class="col-lg-8 col-md-8 col-xs-12 col-sm-8 mx-auto text-center">
                 <p id="question">Soru Buraya Gelecek</p>
             </div>
         </div>
-        <!-- Ouestion Section Finish-->
+        <!-- Ouestion Section End-->
 
         <div class="row">
 
             <!-- Left Section -->
-            <div class="col-lg-6 col-md-6 col-xs-6 col-sm-6">
+            <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4 mx-auto text-center">
                 <img src="images/lahmacun.png" alt="" width="200" height="200" id="left-image">
                 <div class="middle">
                     <p class="choose">A</p>
-                    <p id="left-percent">%50</p>
-                    <p id="left-vote">Oy Sayısı:
-                        <span id="lVote">500</span>
-                    </p>
                 </div>
+                <p id="left-percent">%50</p>
+                <p id="left-vote">Oy Sayısı:
+                    <span id="lVote">500</span>
+                </p>
                 <p id="left-text">
                     Lahmacun
                 </p>
             </div>
             <!-- Left Section End -->
 
+            <!-- vs Section -->
+            <div class="col-lg-2 col-md-2 col-xs-12 col-sm-2 p-5 mx-auto text-center">
+                <img src="images/vs.png" alt="" width="100" height="100" class="m-3">
+            </div>
+            <!-- vs Section End -->
 
             <!-- Right Section -->
-            <div>
+            <div class="col-lg-4 col-md-4 col-xs-12 col-sm-4 mx-auto text-center">
                 <img src="images/hamburger.png" alt="" width="200" height="200" id="right-image">
                 <div class="middle">
                     <p class="choose">B</p>
-                    <p id="right-percent">%50</p>
-                    <p id="right-vote">Oy Sayısı:
-                        <span id="rVote">500</span>
-                    </p>
                 </div>
+
+                <p id="right-percent">%50</p>
+                <p id="right-vote">Oy Sayısı:
+                    <span id="rVote">500</span>
+                </p>
                 <p id="right-text">
-                    Lahmacun
+                    Hamburger
                 </p>
             </div>
             <!-- Right Section End-->
-            
-            <div>
-                <button id="next-button">Sonraki</button>
-            </div>
 
+            <!-- Next Button Section -->
+            <div class="col-lg-10 col-md-10 col-xs-12 col-sm-10 mt-5 mb-3 mx-auto" >
+                <button id="next-button" class="btn btn-lg btn-success float-right">Sonraki</button>
+            </div>
+            <!-- Next Button Section End-->
         </div>
 
     </div>
-    <!-- Script Files Adding This Section -->
+    <!-- Script Files Adding -->
     <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
         crossorigin="anonymous"></script>
     <script src="js/event.js"></script>
-
+    <!-- Script Files Adding End -->
 </body>
 
 </html>
