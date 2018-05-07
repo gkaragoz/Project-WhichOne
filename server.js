@@ -1,14 +1,15 @@
-var express = require('express'),
-    app = express(),
-    port = process.env.PORT || 3000,
-    path = require('path'),
-    http = require('http'),
-    mongoose = require('mongoose'),
+var mongoose = require('mongoose'),
     Models = require('./api/models/whichOneModels'), //created model loading here
-    bodyParser = require('body-parser'),
-    socketIO=require('socket.io'),
-    server = http.createServer(app);
-    io = socketIO(server);
+    bodyParser = require('body-parser');
+
+    const path = require('path');
+const http = require('http');
+const express = require('express');
+const socketIO=require('socket.io');
+const port  =   process.env.PORT ||3000 ;
+var app = express();
+var server = http.createServer(app);
+var io = socketIO(server);
 
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
@@ -26,6 +27,14 @@ app.use(bodyParser.json());
 var routes = require('./api/routes/whichOneRoutes'); //importing route
 routes(app); //register the route
 
-app.listen(port);
+server.listen(port, function () {
+    console.log('WhichOne - RESTful API and Socket server started on: ' + port);
+});
 
-console.log('WhichOne - RESTful API and Socket server started on: ' + port);
+io.on('connection', function(socket) {
+    console.log("A user has been connected: " + socket.id);
+
+    socket.on('disconnect', function () {
+        console.log("A user has been disconnected: " + socket.id);
+    });
+});
