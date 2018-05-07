@@ -16,20 +16,14 @@ $(document).ready(function () {
     });
 
     $("#left-image").click(function () {
-        alert("Sol fotoğrafa tıklandı");
-
         updateAQuestionVote(currentQuestion._id, currentQuestion.leftVotes, 'left');
     });
 
     $("#right-image").click(function () {
-        alert("Sağ fotoğrafa tıklandı");
-
         updateAQuestionVote(currentQuestion._id, currentQuestion.rightVotes, 'right');
     });
 
-    $("next-button").click(function () {
-        alert("Sonraki butonuna tıklandı");
-
+    $("#next-button").click(function () {
         getAQuestion(function (question) {
             handleQuestionResponse(question);
         });
