@@ -1,4 +1,6 @@
 $(document).ready(function() {
+    var currentQuestion;
+
     var leftText=$("#left-text");
     var rightText=$("#right-text");
     var questionText=$("#question");
@@ -11,6 +13,8 @@ $(document).ready(function() {
 
     getAQuestion(function(question) {
         console.log(question);
+        currentQuestion = question;
+
         leftText.html(question.leftChoice.name);
         rightText.html(question.rightChoice.name);
         questionText.html(question.text);
@@ -29,10 +33,14 @@ $(document).ready(function() {
 
     $("#left-image").click(function(){
         alert("Sol fotoğrafa tıklandı");
+
+        updateAQuestionVote(currentQuestion._id, currentQuestion.leftVotes, 'left');
     });
 
     $("#right-image").click(function(){
         alert("Sağ fotoğrafa tıklandı");
+        
+        updateAQuestionVote(currentQuestion._id, currentQuestion.rightVotes, 'right');
     });
 
     $("next-button").click(function(){

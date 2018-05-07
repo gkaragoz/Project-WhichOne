@@ -11,3 +11,23 @@ function getAQuestion (callback) {
         }
     });
 }
+
+function updateAQuestionVote(questionId, votes, side) {
+    var data = {};
+
+    if (side === 'left') {
+        data.leftVotes = ++votes;
+    } else if (side === 'right') {
+        data.rightVotes = ++votes;
+    }
+
+    $.ajax({
+        url:"/questions/" + questionId,
+        type:"PUT",
+        data: data,
+        dataType:"json",
+        success: function (response) {
+            alert(response);
+        }
+    })
+}

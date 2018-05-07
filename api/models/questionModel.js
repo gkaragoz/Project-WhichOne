@@ -16,6 +16,14 @@ var questionSchema = new Schema({
     text: {
         type: String,
         required: true
+    },
+    leftVotes: {
+        type: Number,
+        default: 0
+    },
+    rightVotes: {
+        type: Number,
+        default: 0
     }
 });
 
