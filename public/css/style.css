@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css?family=Shrikhand&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash&subset=latin-ext');
+@import url('https://fonts.googleapis.com/css?family=Titan+One');
 html, body {
     min-height: 100%;
 }
@@ -21,19 +24,61 @@ body:before {
     -o-background-size: cover;
     background-size: cover;
 }
+
 body {
-    
+    /* iOS Safari */
+    -webkit-touch-callout: none;
+    /* Safari */
+    -webkit-user-select: none;
+    /* Konqueror HTML */
+    -khtml-user-select: none;
+    /* Firefox */
+    -moz-user-select: none;
+    /* Internet Explorer/Edge */
+    -ms-user-select: none;
+    /* Non-prefixed version, currently  supported by Chrome and Opera */
+    user-select: none;
 }
 
-.container{
+.container {
     background-color: rgba(0, 0, 0, .5);
     color: white;
-    bottom:0px!important; 
+    margin-top: 5%!important;
+    margin-bottom: 5%;
+    border: 1px solid white;
+}
+
+.question-content {
+    border: 1px dotted white;
+    letter-spacing: 3px;
+    font-family: 'Berkshire Swash', cursive;
+}
+
+.question-content img {
+    width: 250px;
+    height: auto;
+    cursor: pointer;
+}
+
+.details {
+    display: none;
 }
 
 
-/* @import url('https://fonts.googleapis.com/css?family=Shrikhand&subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash&subset=latin-ext');
+.question-text {
+/*     background-color: red;
+ */    
+}
+.question-text p{
+    bottom: 2px;
+    font-family: 'Titan One', cursive;
+    font-size: 23pt;
+    text-transform: uppercase;
+    text-shadow: 2px 2px black;
+    letter-spacing: 10px;
+}
+
+/* 
 * {
     margin: 0px!important;
     padding: 0px!important;
