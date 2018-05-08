@@ -74,7 +74,6 @@ function setDefaultProperties(){
 
 function hasClicked(chooseSide, otherSide, way) {
     if (clickControl) {
-
         setChoose(chooseSide, otherSide);
 
         if (way === 'right') {

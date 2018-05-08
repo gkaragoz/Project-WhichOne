@@ -40,9 +40,6 @@ io.on('connection', function(socket) {
     io.emit('onlineUsers', users.length);
 
     socket.on('getVotes', function (question, callback) {
-        console.log("updated question: " + question.leftVotes);
-        console.log("updated question: " + question.rightVotes);
-
         io.emit('updateVotes', question);
     });
 
