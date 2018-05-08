@@ -18,6 +18,7 @@ $(document).ready(function () {
         handleQuestionResponse(question);
     });
 
+<<<<<<< HEAD
     leftDiv.click(function () {
         hasClicked('#left-div', '#right-div', 'left');
     });
@@ -36,6 +37,20 @@ $(document).ready(function () {
             setDefaultProperties();
             clickControl = true;
         }
+=======
+    $("#left-image").click(function () {
+        updateAQuestionVote(currentQuestion._id, currentQuestion.leftVotes, 'left');
+    });
+
+    $("#right-image").click(function () {
+        updateAQuestionVote(currentQuestion._id, currentQuestion.rightVotes, 'right');
+    });
+
+    $("#next-button").click(function () {
+        getAQuestion(function (question) {
+            handleQuestionResponse(question);
+        });
+>>>>>>> b2c2b9d064c28b46bf5f7d61b14423c4a433a643
     });
 
     function handleQuestionResponse(question) {

@@ -26,8 +26,5 @@ function updateAQuestionVote(questionId, votes, side) {
         type:"PUT",
         data: data,
         dataType:"json",
-        success: function (response) {
-            alert(response);
-        }
     })
 }
