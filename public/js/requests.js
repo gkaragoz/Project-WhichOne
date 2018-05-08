@@ -16,9 +16,9 @@ function updateAQuestionVote(questionId, votes, side) {
     var data = {};
 
     if (side === 'left') {
-        data.leftVotes = ++votes;
+        data.leftVotes = votes;
     } else if (side === 'right') {
-        data.rightVotes = ++votes;
+        data.rightVotes = votes;
     }
 
     $.ajax({
