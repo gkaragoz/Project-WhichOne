@@ -77,12 +77,10 @@ $(document).ready(function () {
             setChoose(chooseSide, otherSide);
 
             if (way === 'right') {
-                
-                //updateAQuestionVote(currentQuestion._id, currentQuestion.rightVotes, way);
+                updateAQuestionVote(currentQuestion._id, currentQuestion.rightVotes, way);
             }
             else if (way === 'left') {
-                
-                //updateAQuestionVote(currentQuestion._id, currentQuestion.leftVotes, way);
+                updateAQuestionVote(currentQuestion._id, currentQuestion.leftVotes, way);
             }
             clickControl = false;
         }

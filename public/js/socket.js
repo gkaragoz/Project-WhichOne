@@ -1,5 +1,5 @@
 var socket = io();
 
-function initSocket() {
-
-}
+socket.on('onlineUsers', function (count) {
+    console.log("Online users: " + count);
+});
