@@ -1,6 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Shrikhand&subset=latin-ext');
-@import url('https://fonts.googleapis.com/css?family=Berkshire+Swash&subset=latin-ext');
+
+@import url('https://fonts.googleapis.com/css?family=Indie+Flower');
 @import url('https://fonts.googleapis.com/css?family=Titan+One');
+
+
 html, body {
     min-height: 100%;
 }
@@ -50,74 +52,37 @@ body {
 
 .question-content {
     border: 1px dotted white;
-    letter-spacing: 3px;
-    font-family: 'Berkshire Swash', cursive;
+    
 }
 
 .question-content img {
     width: 250px;
-    height: auto;
+    height: 200px;
     cursor: pointer;
 }
 
-.details {
+.details-row{
     display: none;
+    font-family: 'Berkshire Swash', cursive;
+    font-size: 13pt;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px black;
+    margin-top: 5px;
 }
 
 
-.question-text {
-/*     background-color: red;
- */    
+.content-text-div{
+    background-color: rgba(255, 0, 0, 0.4);
 }
-.question-text p{
+
+.content-text-value {
     bottom: 2px;
     font-family: 'Titan One', cursive;
     font-size: 23pt;
     text-transform: uppercase;
-    text-shadow: 2px 2px black;
+    text-shadow: 5px 2px black;
     letter-spacing: 10px;
-}
 
-/* 
-* {
-    margin: 0px!important;
-    padding: 0px!important;
-}
-
-
-
-.side-bar, .vs-bar {
-    text-align: center;
-}
-
-
-.vs-bar p {
-    margin: 40% auto!important;
-    position: absolute;
-    width: 100%;
-    height: 20%;
-    line-height: 45px;
-    font-family: 'Shrikhand', cursive;
-    font-size: 27pt;
-    color: white;
-    background-color: black;
-}
-
-.content {
-    position: relative;
-    width: 50%;
-    height: 100%;
-    margin: 5px;
-}
-
-.image {
-    opacity: 1;
-    display: block;
-    width: 100%;
-    height: 100%;
-    transition: .5s ease;
-    backface-visibility: hidden;
-    box-shadow: 5px 20px 5px black;
 }
 
 .middle {
@@ -131,37 +96,27 @@ body {
     text-align: center;
 }
 
-.content{
-    
-    padding: 25px!important;
-}
-.content:hover .image {
+
+.question-content:hover img {
     opacity: 0.3;
 }
 
-.content:hover {
-    background-color: rgba(0, 0, 0, 0.5);
+.question-content:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none;
     cursor: pointer;
 }
 
-.content:hover .middle {
+.question-content:hover .middle {
     opacity: 1;
 }
 
-.container-fluid {
-    padding:50px 0px 50px 0px; 
-    position: absolute;
-    top: 40%;
-    width: 100%;
-    height: auto;
-  background-color: rgba(255, 255, 255, 0.3); 
-}
 
 .middle p {
     color: white;
     text-shadow: 2px 2px black;
-    font-family: 'Berkshire Swash', cursive;
+    font-family: 'Indie Flower', cursive;
     line-height: 28px;
-    font-size: 15px;
+    font-size: 76pt;
     font-style: italic;
-}  */
+} 
