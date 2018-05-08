@@ -54,8 +54,8 @@ function handleQuestionResponse(question) {
     var leftPercentage = (question.leftVotes * 100) / totalVotes;
     var rightPercentage = (question.rightVotes * 100) / totalVotes;
 
-    leftPercent.html("%" + leftPercentage);
-    rightPercent.html("%" + rightPercentage);
+    leftPercent.html("%" + parseFloat(Math.round(leftPercentage * 100) / 100).toFixed(2));
+    rightPercent.html("%" + parseFloat(Math.round(rightPercentage * 100) / 100).toFixed(2));
 }
 
 function setChoose(chooseContent, otherContent) {
