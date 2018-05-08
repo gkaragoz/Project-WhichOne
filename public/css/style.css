@@ -120,3 +120,19 @@ body {
     font-size: 76pt;
     font-style: italic;
 } 
+
+.online-users{
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    color:white;
+    padding: 10px;
+    border: 1px dotted white;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.online-users p {
+    text-shadow: 10px 2px black;
+}
+
+
