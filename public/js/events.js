@@ -13,7 +13,7 @@ var rightVote = $("#right-vote");
 var leftPercent = $("#left-percent");
 var rightPercent = $("#right-percent");
 var nextButton = $("#next-button");
-var clickControl = true;
+var isClickable = true;
 
 $(document).ready(function () {
 
@@ -32,6 +32,7 @@ $(document).ready(function () {
     nextButton.click(function () {
         setDefaultProperties();
         getAQuestion(function (question) {
+            isClickable = true;
             handleQuestionResponse(question);
         });
     });
@@ -70,7 +71,7 @@ function setDefaultProperties(){
 }
 
 function hasClicked(chooseSide, otherSide, way) {
-    if (clickControl) {
+    if (isClickable) {
         setChoose(chooseSide, otherSide);
 
         if (way === 'right') {
@@ -79,7 +80,7 @@ function hasClicked(chooseSide, otherSide, way) {
         else if (way === 'left') {
             updateAQuestionVote(currentQuestion._id, ++currentQuestion.leftVotes, way);
         }
-        clickControl = false;
+        isClickable = false;
 
         socket.emit('getVotes', currentQuestion); 
     }
