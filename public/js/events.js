@@ -5,6 +5,8 @@ var rightText = $("#right-text");
 var questionText = $("#question");
 var leftDiv = $("#left-div");
 var rightDiv = $("#right-div");
+var leftImage = $("#left-image");
+var rightImage = $("#right-image");
 var details = $(".details-row");
 var leftVote = $("#left-vote");
 var rightVote = $("#right-vote");
@@ -28,15 +30,10 @@ $(document).ready(function () {
     });
 
     nextButton.click(function () {
-
-        if (!clickControl) {
-            alert("İleri butonuna tıklandı");
-            getAQuestion(function (question) {
-                handleQuestionResponse(question);
-            });
-            setDefaultProperties();
-            clickControl = true;
-        }
+        setDefaultProperties();
+        getAQuestion(function (question) {
+            handleQuestionResponse(question);
+        });
     });
 });
 
@@ -47,8 +44,8 @@ function handleQuestionResponse(question) {
     leftText.html(question.leftChoice.name);
     rightText.html(question.rightChoice.name);
     questionText.html(question.text);
-    leftDiv.attr("src", question.leftChoice.imageUrl);
-    rightDiv.attr("src", question.rightChoice.imageUrl);
+    leftImage.attr("src", question.leftChoice.imageUrl);
+    rightImage.attr("src", question.rightChoice.imageUrl);
     leftVote.html(question.leftVotes + " kez oylandı.");
     rightVote.html(question.rightVotes + " kez oylandı.");
 
